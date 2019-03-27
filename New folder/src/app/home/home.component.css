@@ -1,0 +1,37 @@
+.heart {
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    background-image:url( 'https://abs.twimg.com/a/1446542199/img/t1/web_heart_animation.png');
+    background-position: left;
+    background-repeat:no-repeat;
+    background-size:2900%;
+    float: right;
+  }
+  
+  .heart:hover {
+    background-position:right;
+  }
+  
+  .is_animating {
+    animation: heart-burst .8s steps(28) 1;
+  }
+  
+  @keyframes heart-burst {
+    from {background-position:left;}
+    to { background-position:right;}
+  }
+  
+
+  .hicon{
+    float: right;
+    color: gray;
+  }
+
+  /* .hicon:active {
+    color: rgb(199, 3, 3);
+  } */
+
+  .hicon i .ng-touched{
+    color: rgb(199, 3, 3);
+  }

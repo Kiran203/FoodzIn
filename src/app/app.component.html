@@ -1,0 +1,114 @@
+
+<body>
+    <nav class="navbar navbar-inverse">
+     <div class="container-fluid">
+       <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>                        
+         </button>
+         <a class="navbar-brand" href="#"></a>
+       </div>
+       <div class="collapse navbar-collapse" id="myNavbar">
+         <ul class="nav navbar-nav">
+           <li></li>
+           <li><a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRofbBnRL9StWeEj4zN6Tfc4TLpRHrEfbgG5bEvyVI8YsX1h9MqDg" style="width: 50px;"></a></li>
+            <li style="color: #006EAB;"><a href=""><h2>{{title}}</h2></a></li>
+         
+       </ul>
+         <ul class="nav navbar-nav navbar-right">
+           <li  class="search-container" style="padding: 6px;margin-top: 8px; margin-right: 16px;">
+               <input type="text" placeholder="Search..." name="search" style="width: 250px; border-radius: 5px;"></li>
+           <li><a (click)="login()"><button mat-raised-button color="primary">Login <span class="glyphicon glyphicon-log-in"></span></button></a></li>
+           <li><a (click)="login()"><button mat-raised-button color="warn">Create an account <span class="glyphicon glyphicon-edit"></span></button></a></li>
+         </ul>
+       </div>
+     </div>
+   </nav> 
+   
+   <!-- <div class="container" style="height: 400px;">
+     <div id="myCarousel" class="carousel slide" data-ride="carousel" style="height: 400px;">
+       
+       <ol class="carousel-indicators">
+         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+         <li data-target="#myCarousel" data-slide-to="1"></li>
+         <li data-target="#myCarousel" data-slide-to="2"></li>
+       </ol>
+   
+      
+       <div class="carousel-inner" style="height: -webkit-fill-available;">
+         <div class="item active">
+           <img src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/04/26/Pictures/_e80527ae-493b-11e8-b98f-44ca1ff8ed36.jpg" style="width:100%;">
+           <div class="carousel-caption">
+             <h1>{{title}}</h1>      
+             <p>Search &nbsp; | &nbsp; Order  &nbsp; | &nbsp; Dine-In</p>
+         </div>
+         </div>
+   
+         <div class="item">
+           <img src="https://cdn.vox-cdn.com/thumbor/taV77o8LrN09AmGgkd65x2A0kcY=/0x0:960x640/1200x800/filters:focal(404x244:556x396)/cdn.vox-cdn.com/uploads/chorus_image/image/58663211/chinatown_ice_cream.0.0.jpg" style="width:100%;">
+           <div class="carousel-caption">
+             <h1>{{title}}</h1>      
+             <p>Search &nbsp; | &nbsp; Order  &nbsp; | &nbsp; Dine-In</p>
+         </div>
+         </div>
+       
+         <div class="item">
+           <img src="https://static01.nyt.com/images/2016/08/15/dining/15COOKING-PASTA/15COOKING-PASTA-threeByTwoMediumAt2X-v2.jpg">
+           <div class="carousel-caption">
+             <h1>{{title}}</h1>      
+             <p>Search &nbsp; | &nbsp; Order  &nbsp; | &nbsp; Dine-In</p>
+         </div>
+         </div>
+       </div>
+   
+      
+       <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+         <span class="glyphicon glyphicon-chevron-left"></span>
+         <span class="sr-only">Previous</span>
+       </a>
+       <a class="right carousel-control" href="#myCarousel" data-slide="next">
+         <span class="glyphicon glyphicon-chevron-right"></span>
+         <span class="sr-only">Next</span>
+       </a>
+     </div>
+   </div> -->
+     
+   <!-- <div class="container-fluid bg-3 text-center">    
+     <h3>Restaurants</h3><br>
+     <div class="row">
+ 
+         <div *ngFor="let  rest of restaurants" class="col-sm-3">
+             <mat-card (click)="goToRestaurants(rest)" >
+                 <mat-card-header class="example-card">
+                   <mat-card-title class="zoom"><img class="imgi" src="{{rest.imageUrl}}"></mat-card-title>
+                   <mat-card-subtitle></mat-card-subtitle>
+                 </mat-card-header>
+                 
+                 <mat-card-content>
+                     <h4>{{rest.name}}</h4>
+                     <p>View All >></p>
+                 </mat-card-content>
+                 
+               </mat-card>
+         </div>
+     </div>
+   </div><br>
+   <br><br> -->
+<!--    
+   <footer class="container-fluid text-center">
+     <p class="footerp" (click)="about()" >About Us &nbsp; | &nbsp; Blogs  &nbsp; | &nbsp; Contact Us</p>
+     <p>
+         <a href="#" class="fa fa-facebook"></a>
+         <a href="#" class="fa fa-twitter"></a>
+         <a href="#" class="fa fa-google"></a>
+         <a href="#" class="fa fa-youtube"></a>
+         <a href="#" class="fa fa-instagram"></a>
+         <a href="#" class="fa fa-pinterest"></a>
+         </p>
+   </footer> -->
+   
+ 
+ </body>
+<router-outlet></router-outlet>

@@ -1,0 +1,41 @@
+
+
+  <!-- <mat-card style="height: auto;">
+    <mat-card-content > -->
+          <div class="container-fluid bg-3 text-center">    
+              <mat-card-title>{{restname}}</mat-card-title>
+              <div class="row">
+          
+                  <div *ngFor="let drest of drestaurants" class="col-sm-3">
+                      <mat-card (click)="goToRestDetails(drest)" >
+                          <mat-card-header class="example-card" style="height: 200px;">
+                            <div mat-card-avatar class="example-header-image"></div>
+                            <mat-card-title class="zoom"><img class="imgi" src="{{drest.imageUrl}}"></mat-card-title>
+                            <mat-card-subtitle></mat-card-subtitle>
+                          </mat-card-header>
+                          
+                          <mat-card-content>
+                              <h4>{{drest.name}}</h4>
+                          </mat-card-content>
+                          
+                        </mat-card>
+                  </div>
+              </div>
+            </div>
+    <!-- </mat-card-content>
+  </mat-card> -->
+
+  <br>
+  <br><br>
+  
+  <footer class="container-fluid text-center">
+    <p class="footerp" (click)="about()" >About Us &nbsp; | &nbsp; Blogs  &nbsp; | &nbsp; Contact Us</p>
+    <p>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-pinterest"></a>
+        </p>
+  </footer>  

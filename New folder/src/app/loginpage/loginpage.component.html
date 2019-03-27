@@ -1,0 +1,132 @@
+
+<div class="container">
+  <mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile>
+        <mat-card>
+            <h3>Login</h3>
+            <div class="container login">
+                <div [hidden]="submitted">
+                  <form (ngSubmit)="onSubmit()" #loginForm="ngForm" novalidate>
+                    <div class="form-group">
+                      <label for="uname">Name</label>
+                      <input type="text" class="form-control" required
+                      [(ngModel)]="model.uname" name="uname" #uname="ngModel">
+                      <div [hidden]="uname.valid || uname.pristine"
+                           class="alert alert-danger">
+                        Name is required
+                      </div>
+                       <label for="pass">Password</label>
+                      <input type="password" class="form-control" required
+                             [(ngModel)]="model.pass" name="pass"
+                             #pass="ngModel">
+                      <div [hidden]="pass.valid || pass.pristine"
+                           class="alert alert-danger">
+                        Password is required
+                      </div>
+                    </div>
+                    
+                    <button type="button" class="btn btn-default" (click)="newlogin(); loginForm.reset()">Reset</button>
+                    <button type="submit" class="btn btn-danger" (click)="home()">Cancel</button>
+                    <button type="submit" class="btn btn-success" [disabled]="!loginForm.form.valid">Submit</button>
+                    
+              
+                   <!--  
+                    <div>
+                      <hr>
+                         Name via form.controls = {{showFormControls(loginForm)}}
+                      <hr>
+                    </div>
+                    -->
+                  </form>
+                </div>
+              </div>  
+        </mat-card>      
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card>
+          <h3>Create new account</h3>
+          <div class="container login">
+              <div [hidden]="submitted">
+                <form (ngSubmit)="onSubmit()" #accForm="ngForm">
+                  <div class="form-group">
+                    <label for="aname">Name</label>
+                    <input type="text" class="form-control" required
+                           [(ngModel)]="amodel.aname" name="aname"
+                           #aname="ngModel">
+                    <div [hidden]="aname.valid || aname.pristine"
+                         class="alert alert-danger">
+                      Name is required
+                    </div>
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" required
+                           [(ngModel)]="amodel.email" name="email"
+                           #email="ngModel">
+                    <div [hidden]="email.valid || email.pristine"
+                         class="alert alert-danger">
+                         Email-Id is required
+                    </div>
+                    <label for="anumber">Phone No.</label>
+                    <input type="number" maxlength="10" class="form-control" required
+                           [(ngModel)]="amodel.anumber" name="anumber"
+                           #anumber="ngModel">
+                    <div [hidden]="anumber.valid || anumber.pristine"
+                         class="alert alert-danger">
+                         Phone No. is required
+                    </div>
+                    <label for="apass">Password</label>
+                    <input type="password" class="form-control" required
+                           [(ngModel)]="amodel.apass" name="apass"
+                           #apass="ngModel">
+                    <div [hidden]="apass.valid || apass.pristine"
+                         class="alert alert-danger">
+                      Password is required
+                    </div>
+                    <label for="city">City</label>
+                    <select class="custom-select form-control" name="city" required
+                    [(ngModel)]="amodel.city" name="city"
+                    #city="ngModel" > 
+                        <option *ngFor="let acity of citys ">
+                         {{acity}}
+                        </option>
+                      </select>
+                    <div [hidden]="city.valid || city.pristine"
+                         class="alert alert-danger">
+                         City is required
+                    </div>
+                  </div>
+                  
+                  <button type="button" class="btn btn-default" (click)="newacc(); accForm.reset()">Reset</button>
+                  <button type="submit" class="btn btn-danger">Cancel</button>
+                  <button type="submit" class="btn btn-success" [disabled]="!accForm.form.valid">Submit</button>
+                  
+            
+                 <!--  
+                  <div>
+                    <hr>
+                       Name via form.controls = {{showFormControls(loginForm)}}
+                    <hr>
+                  </div>
+                  -->
+                </form>
+              </div>
+            </div>  
+      </mat-card>
+    </mat-grid-tile>
+    
+  </mat-grid-list>
+</div><br>
+<br><br>
+
+<footer class="container-fluid text-center">
+  <p class="footerp" (click)="about()" >About Us &nbsp; | &nbsp; Blogs  &nbsp; | &nbsp; Contact Us</p>
+  <p>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-youtube"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-pinterest"></a>
+      </p>
+</footer>
+<router-outlet></router-outlet>

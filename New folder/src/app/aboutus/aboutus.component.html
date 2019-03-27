@@ -1,0 +1,226 @@
+
+<body>
+
+ <div class="container" style="height: 400px;">
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          About Us
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          Type your name and age
+          <mat-icon>account_circle</mat-icon>
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+      <div style="text-align:center; padding: 5px; background-color: #fdecea;">
+        <h3>We do this by</h3><hr>
+        <h4>Helping people discover great places around them.</h4>
+        
+        Our team gathers information from every restaurant on a regular basis to ensure our data is fresh. Our vast community of food lovers share their reviews and photos, so you have all that you need to make an informed choice.
+        
+        <h4>Building amazing experiences around dining.</h4>
+        
+        Starting with information for over 1 million restaurants (and counting) globally, we're making dining smoother and more enjoyable with services like online ordering and table reservations.
+        
+        <h4>Enabling restaurants to create amazing experiences.</h4>
+        
+        With dedicated engagement and management tools, we're enabling restaurants to spend more time focusing on food itself, which translates directly to better dining experiences.
+  </div>
+
+      <mat-action-row>
+        <button mat-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Blogs
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          Type the country name
+          <mat-icon>map</mat-icon>
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+  
+      <div class="row" style="background-color: #fdecea;">
+  
+         <div class="col-sm-3">
+             <mat-card >
+                 <mat-card-header class="example-card">
+                   <mat-card-title>
+                      <a href="#myModal" data-toggle="modal">
+                    <img class="bimg" src="/assets/blog1.png"></a>
+                   </mat-card-title>
+                   <mat-card-subtitle>
+                      Food Hygiene Ratings: More than a Band-Aid
+                   </mat-card-subtitle>
+                 </mat-card-header>
+                
+               </mat-card>
+               <!-- Modal HTML -->
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">YouTube Video</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe id="cartoonVideo" width="560" height="315" src="https://www.youtube.com/watch?v=iguM_pqetzo" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+         </div>
+         <div class="col-sm-3">
+             <mat-card >
+                 <mat-card-header class="example-card">
+                   <mat-card-title>
+                     <img class="bimg" src="/assets/blog2.jpg">
+                   </mat-card-title>
+                   <mat-card-subtitle>
+                     Feeding India join hands to fight hunger
+                   </mat-card-subtitle>
+                 </mat-card-header>
+                
+               </mat-card>
+         </div>
+         <div class="col-sm-3">
+             <mat-card >
+                 <mat-card-header class="example-card">
+                   <mat-card-title>
+                     <img class="bimg" src="/assets/blog3.jpg">
+                   </mat-card-title>
+                   <mat-card-subtitle>
+                     Our learnings from Huddle on Machine Learning
+                   </mat-card-subtitle>
+                 </mat-card-header>
+                
+               </mat-card>
+         </div>
+         <div class="col-sm-3">
+          <mat-card >
+              <mat-card-header class="example-card">
+                <mat-card-title>
+                  Stay Connected
+                </mat-card-title>
+                <mat-card-subtitle>
+                  
+                   <p><a href="#" class="fa fa-facebook"></a>Like</p>
+                   <p><a href="#" class="fa fa-twitter"></a>Follow</p>
+                   <p><a href="#" class="fa fa-youtube"></a>Subscribe</p>
+                   <p><a href="#" class="fa fa-instagram"></a>Follow</p>
+                  
+                </mat-card-subtitle>
+              </mat-card-header>
+             
+            </mat-card>
+      </div>
+     </div>
+  
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Previous</button>
+        <button mat-button color="primary" (click)="nextStep()">Next</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  
+    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Contact 
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          Inform the date you wish to travel
+          <mat-icon>date_range</mat-icon>
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+  
+      <!-- <mat-form-field>
+        <input matInput placeholder="Date" [matDatepicker]="picker" (focus)="picker.open()" readonly>
+      </mat-form-field>
+      <mat-datepicker #picker></mat-datepicker> -->
+      <div class="example-container" style="text-align:center; background-color: #fdecea;">
+          <form #contact="ngForm">
+            <div class="form-group">
+              <mat-form-field>
+                <input matInput placeholder="Name" required>
+              </mat-form-field><br>
+              <mat-form-field>
+                <input matInput placeholder="Enter your email" required>
+                <!-- [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+              </mat-form-field><br>
+              <mat-form-field>
+                <mat-select placeholder="How can we help you?">
+                  <mat-option *ngFor="let query of queries" [value]="query.value">
+                    {{query.viewValue}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field><br>
+              <mat-form-field>
+                <textarea matInput placeholder="Message"></textarea>
+              </mat-form-field>
+            </div>
+            <button type="button" class="btn btn-danger">Send Message</button>
+          </form>
+      </div>
+      <!-- <div class="example-container">
+        <img src="/assets/global.png" alt="global">  
+      </div> -->
+
+      <mat-action-row>
+        <button mat-button color="warn" (click)="prevStep()">Previous</button>
+        <button mat-button color="primary" (click)="nextStep()">End</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  
+  </mat-accordion>
+  
+  
+  <!-- Copyright 2018 Google Inc. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at http://angular.io/license -->
+ </div>
+   
+<br>
+ <br><br>
+ <!-- <footer class="container-fluid text-center">
+  <p class="footerp" (click)="about()" >About Us &nbsp; | &nbsp; Blogs  &nbsp; | &nbsp; Contact Us</p>
+  <p>
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-twitter"></a>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-youtube"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-pinterest"></a>
+      </p>
+</footer> -->
+
+
+<!-- Modal HTML -->
+<script type="text/javascript">
+$(document).ready(function(){
+  /* Get iframe src attribute value i.e. YouTube video url
+  and store it in a variable */
+  var url = $("#cartoonVideo").attr('src');
+  
+  /* Assign empty url value to the iframe src attribute when
+  modal hide, which stop the video playing */
+  $("#myModal").on('hide.bs.modal', function(){
+      $("#cartoonVideo").attr('src', '');
+  });
+  
+  /* Assign the initially stored url back to the iframe src
+  attribute when modal is displayed again */
+  $("#myModal").on('show.bs.modal', function(){
+      $("#cartoonVideo").attr('src', url);
+  });
+});
+</script>
+
+
+ <router-outlet></router-outlet>  
+
+</body>

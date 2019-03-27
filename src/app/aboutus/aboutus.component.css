@@ -1,0 +1,37 @@
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bimg{
+    height: 150px;
+    width: 200px;
+}
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+mat-form-field{
+  width: 80%;
+}
+
+mat-expansion-panel-header{
+  /* background-color: #f44336; */
+  font-weight: bolder;
+  height: 40px !important;
+}
+
+.modal-content iframe{
+  margin: 0 auto;
+  display: block;
+}

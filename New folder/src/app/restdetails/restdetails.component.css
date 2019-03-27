@@ -1,0 +1,30 @@
+
+
+.rdimgs{
+    height: 250px;
+    width: 90%;
+}
+
+.menuimg{
+    height: 300px;
+    width: 100%;
+}
+
+mat-card{
+    width: 95%;
+    height: auto;
+    text-align: left;
+}
+.form-group{
+    width: 80%;
+}
+
+mat-chip{
+    /* width: 100px; */
+    padding: 5px;
+    font-weight: bolder;
+}
+
+.btn {
+  margin: 10px;
+}

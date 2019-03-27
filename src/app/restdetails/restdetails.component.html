@@ -1,0 +1,150 @@
+
+
+ <mat-card style="height: auto; width: 99%;">
+     <mat-card-content >
+        <div class="container-fluid bg-3 text-center">   
+            <mat-card-title>
+                <div class="row">
+                  <div class="col-sm-3" style="height: 250px;width: 25%; padding:5%; ">
+                        <h3>{{restname}}</h3>
+                  </div>
+                    <div class="col-sm-3">
+                        <img class="rdimgs" src="https://media-cdn.tripadvisor.com/media/photo-s/13/48/f8/55/img-20180614-231037-145.jpg">
+                    </div>
+                    <div class="col-sm-3">
+                        <img class="rdimgs" src="https://res.cloudinary.com/trell/f_auto,fl_progressive,t_medium/user-content/images/orig/AhY1vKWqtcPaTaI81Z8B.jpg">
+                    </div>
+                    <div class="col-sm-3">
+                        <img class="rdimgs" src="https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/bdzkgtwpd4oou0mv9qrn">
+                    </div>
+                </div>
+            </mat-card-title>
+              
+            <div class="container-fluid bg-3 text-center"> 
+                <div class="row">
+                    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+                        <mat-tab label="Overview">
+                          
+                          <div class="col-sm-3">
+                              <h4>Cuisines</h4>
+                              <h5>Beverages, Desserts</h5><br>
+                              <h4><i class="material-icons">call</i>Phone Number</h4>
+                              <h5>+91 9876543210</h5><br>
+                              <h4><i class="material-icons">attach_money</i>Average Cost </h4>
+                              <h5>₹400 for two people (approx.)</h5>
+                                  <h6>Exclusive of applicable taxes and charges, if any</h6>
+                              <h5>Cash and Debit Cards accepted</h5>
+                          </div>
+                          <div class="col-sm-3">
+                              <h4><i class="material-icons">schedule</i>Opening Hours</h4>
+                              <h5>Today  11am – 12:30AM</h5><br>
+                              <h4>Address</h4>
+                              <h5>Survey 1, Revati Arcade, Opposite K Factory, Baner, Pune</h5>
+                        </div>
+                        <div class="col-sm-3">
+                            <h4>More Info</h4>
+                            <h5><i class="material-icons">done</i>Home Delivery</h5>
+                            <h5><i class="material-icons">done</i>Vegetarian Only</h5>
+                            <h5><i class="material-icons">done</i>Outdoor Seating</h5>
+                            <h5><i class="material-icons">done</i>Indoor Seating</h5>
+                      </div>
+                        
+                      <div class="col-sm-3">
+                        <h4>What people love here</h4><br>
+                        <h5>Chocolate Hazelnut, Thick Shakes, Brownie Chocolate, <br>
+                          Belgian Chocolate, Chocolate Shake, Tiramisu, Oreo Shake</h5>
+                      </div>
+                    </mat-tab>
+
+                        <mat-tab label="Menu">  
+                          <div class="col-sm-3">
+                              <img class="menuimg" mat-raised-button src="https://b.zmtcdn.com/data/menus/981/18574981/e68b3164407540c09926808f52995e41.png?output-format=webp">
+                          </div>
+                          <div class="col-sm-3">
+                              <img class="menuimg"  src="https://b.zmtcdn.com/data/menus/981/18574981/1157c36d66010b21b9182bfe445b15df.png">
+                          </div>
+                          <div class="col-sm-3">
+                              <img class="menuimg" src="https://b.zmtcdn.com/data/menus/981/18574981/1f5f50bb3f1777ac1c4b278c4cf6c596.jpg">
+                          </div>
+                          <div class="col-sm-3">
+                              <img class="menuimg" src="https://b.zmtcdn.com/data/menus/981/18574981/64d106062153e5c37e41ae1034152922.jpg">
+                          </div>
+                        </mat-tab>
+                        <mat-tab label="Reviews"> 
+                            <mat-card>
+                                <div class="container">  
+                                  <div class="col-sm-6">                           
+                                  <section class="example-section">
+                                    <mat-progress-bar class="example-margin" color = "primary" value = "75"></mat-progress-bar>5<i class="material-icons">star_rate</i><br><br>
+                                    <mat-progress-bar class="example-margin" color = "warn" value = "50"></mat-progress-bar>4<i class="material-icons">star_rate</i><br><br>
+                                    <mat-progress-bar class="example-margin" color = "accent" value = "40"></mat-progress-bar>3<i class="material-icons">star_rate</i><br><br>
+                                    <mat-progress-bar class="example-margin" color = "primary" value = "35"></mat-progress-bar>2<i class="material-icons">star_rate</i><br><br>
+                                    <mat-progress-bar class="example-margin" color = "warn" value = "20"></mat-progress-bar>1<i class="material-icons">star_rate</i><br><br>
+                                  </section>
+                                  </div>
+                                  <div class="col-sm-6">
+                                      <mat-chip-list>
+                                          <mat-chip color="accent" selected>4.5/5</mat-chip>
+                                      
+                                      <h5>185 reviews<br>
+                                          185ratings</h5>
+                                        <h5 style="margin-right: 15px;">The rating is based on weighted average method of calculation that takes into account multiple factors such as votes, 
+                                          user credibility and local trends to come up with a score that you can rely on.</h5>
+                                        </mat-chip-list>
+                                  </div>
+                                </div>
+                              </mat-card>
+                        </mat-tab>
+                        <mat-tab label="Book a Table">
+                            <mat-card>
+                                    <div class="container">
+                                        <div [hidden]="submitted">
+                                        <form (ngSubmit)="onSubmit()" #book="ngForm">
+                                        <div class="form-group">
+                                              <label for="username">Name</label>
+                                              <input type="text" class="form-control" name="username" required ngModel>
+                                              <label for="unumber">Number of people</label>
+                                              <input type="number" class="form-control" name="unumber" required ngModel>
+                                              <label for="dnt">Date</label>
+                                              <input type="date" class="form-control" name="dnt" required ngModel>
+                                              <label for="dnt">Time</label>
+                                              <mat-chip-list>
+                                                <mat-chip color="accent" selected>10.00AM - 12.00PM</mat-chip>
+                                                <mat-chip color="accent" selected>12.00AM - 3.00PM</mat-chip>
+                                                <mat-chip color="accent" selected>03.00AM - 07.00PM</mat-chip>
+                                                <mat-chip color="accent" selected>07.00AM - 10.00PM</mat-chip>
+                                              </mat-chip-list>
+                                            </div>
+                                      <button type="button" class="btn btn-default" (click)="newuser(); book.reset()">Reset</button>
+                                      <button type="submit" class="btn btn-success" [disabled]="!book.form.valid">Book Now</button>
+                                    
+                                        </form>
+                                        </div>
+                                        </div>
+                                </mat-card>
+                              </mat-tab>
+                      
+                      </mat-tab-group>
+                </div>
+              </div><br>
+             
+        </div>
+      </mat-card-content>
+  </mat-card>        
+
+  <br>
+  <br><br>
+  
+  <footer class="container-fluid text-center">
+    <p class="footerp" (click)="about()" >About Us &nbsp; | &nbsp; Blogs  &nbsp; | &nbsp; Contact Us</p>
+    <p>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-pinterest"></a>
+        </p>
+  </footer>
+              
+ <router-outlet></router-outlet>  

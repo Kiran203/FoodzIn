@@ -1,0 +1,166 @@
+  @import 'https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css';
+  @import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+  @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+  html {
+    height: 100%;
+  }
+  body {
+    min-height: 80%;
+  }
+  .navbar {
+      margin-bottom: 0;
+      border: none;
+      background-color: #fff;
+    }
+
+  .navbar-inverse .navbar-nav>li>a{
+    color: #672D91;
+    cursor: pointer;
+  }
+
+  .navbar-inverse .navbar-nav>li>a:hover { 
+    color: #006EAB;
+  }
+  
+  .carousel-caption{
+      bottom: 300px;
+  }
+  .imgi{
+    height: 100%;
+    /* margin-left: -35px; */
+    width: 100%;
+  }
+
+  mat-card{
+    margin: 10px;
+    width: 100%; 
+    height: 250px;
+    margin-bottom: 10px;
+    color: chocolate;
+  }
+
+  mat-card-title{
+    color: chocolate;
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+  .carousel-caption{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  
+  .example-ripple-container {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    -webkit-user-drag: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .example-header-image {
+    /* background-image: url('/assets/item.png'); */
+    background-size: cover;
+    max-width: 30px;
+    max-height: 30px;
+  }
+
+  .zoom:hover {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+    transform: scale(1.5); 
+  }
+
+  footer {
+      background:linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+                  linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+                  linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+                  linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+                  linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+                  linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+      background-color: #131313;
+      background-size: 20px 20px;
+      color: aliceblue;
+      padding: 5px;
+      position: fixed ;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  .footerp{
+      cursor: pointer;
+    }
+
+    .fa {
+      padding: 5px;
+      font-size: 20px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 50%;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    
+    .fa-google {
+      background: #dd4b39;
+      color: white;
+    }
+    
+    .fa-youtube {
+      background: #bb0000;
+      color: white;
+    }
+    
+    .fa-instagram {
+      background: #125688;
+      color: white;
+    }
+    
+    .fa-pinterest {
+      background: #cb2027;
+      color: white;
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      /* color: #ffffff; */
+    }
+
+
+    .ng-valid[required], .ng-valid.required  {
+      border-left: 5px solid #42A948; /* green */
+    }
+     
+    .ng-invalid:not(form)  {
+      border-left: 5px solid #a94442; /* red */
+    }
